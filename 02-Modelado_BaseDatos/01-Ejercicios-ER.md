@@ -23,7 +23,7 @@ En un hospital se registra informacion de sus pasientes
 4. No puede existir un paciente sin expediente.
 
 ## Resultado Modelo E-R
-![Hospital]()
+![Hospital](/img/E-R/trabajo1.jpg)
 
 ## 2. Ejercicio 2
 
@@ -58,6 +58,9 @@ una universidad administra profesores y usrsos.
     -Determinar la cardinalidad.
     -Determinar la participacion.
 
+## Resultado Modelo E-R
+![UNIVERSIDAD](/img/E-R/diagrama2.jpg)
+
 ## 3. Ejercicio 3
 
 Una escuela administra alumnos y materias, de cada alumno se almacena.
@@ -81,6 +84,9 @@ De cada materia se almacena.
 5. De cada inscripcion se debe almacenar: fehca de inscripticon y calificacion final
 
 **La relacion entre las unidades se debe llamar INCRIBE** 
+
+## Resultado Modelo E-R
+![ESCUELA](/img/E-R/Ejercicio3.jpg)
 
 ## EJERCICIO 4.
 
@@ -115,3 +121,5 @@ Una empresa encargadad de realizar venta de productos:
 8. El detalle de pedidio no existe sin producto.
 9. El detalle almacena cantidad y precio de venta.
  
+## Resultado Modelo E-R
+![EMPRESA](/home/yael/Documentos/trabajo1.jpg)
