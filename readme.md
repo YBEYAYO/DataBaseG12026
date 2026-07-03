@@ -116,10 +116,9 @@ ORDER BY i.fecha_registro DESC;
 
 ## 👤 Autor
 
-- **[Tu Nombre Aquí]**
+- **[Yael Barrera Escamilla]**
 - [Tu Enlace a LinkedIn o Email]
 
 ---
 
 ⭐ *Si este repositorio te fue útil, considera dejar una estrella.*
-
