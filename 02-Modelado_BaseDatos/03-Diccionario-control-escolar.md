@@ -1,10 +1,10 @@
-## DICCIONARIO DE DATOS DE LA BASE DE DATOS DE CONTROL ESCOLAR.
+## DICCIONARIO DE DATOS DE LA BASE DE DATOS DE EMPRESA.
 ---
 1. Informacion general 
 
 | Elemento | Valor |
 | :---------| :---------|
-| Proyecto    | Control escolar    |
+| Proyecto    | Control escolar |
 | Version    | 1.0    |
 | Fecha    | junio 2026    |
 | Elaboro    | Ing. Yael Barrera Escamilla    |
@@ -15,7 +15,7 @@
 2. Descripcion del sistema de base de datos.
 
 el sistema administra:
-- Carrera
+Carrera
 - Alumnos
 - Profesores
 - Materias
@@ -43,32 +43,32 @@ Permite controlar la oferta academica y la inscripcion de estudiantes.
 
 4. Diccionario de datos.
 
-## Taba: Carrera
+## Tabla: CARRERA.
 
 **DESCRIPCION**
 Almacena las carreras ofertadas por la universidad
 
 | CAMPO | TIPO | LONGITUD | RESTRICCIONES | DESCRIPCION |
 | :---  | :--- |   :---   | :--- | :--- |
-|id_carrera | INT | - | PK,AI,NN | Identificador unico de la carrera |
-| nombre | varchar | 100 | UQ,NN | Nombre de la carrera |
-| duracion_cuatrimestre | INT | - | NN,CK(>0) | Nombre |
+| id_carrera | INT | - | PK,AI,NN | Identificador unico de la carrera |
+| Nombre | VARCHAR | 100 | UQ,NN | Nombre de la carrera |
+| Duracion_cuatrimestre | INT | - | NN, CK(>0) | Tiempo que va a durar el cuatrimestre |
 
-## Tabla: Alumno
+## Tabla: ALUMNO
 
 **DESCRIPCION**
-Almacena Informacion de los estudiantes.
+Almacena Informacion de los eestudiantes.
 
 | CAMPO | TIPO | LONGITUD | RESTRICCIONES | DESCRIPCION |
 | :---  | :--- |   :---   | :--- | :--- |
 | id_alumno | INT | - | PK, AI, NN | Identificador unico del alumno |
-| matricula | VARCHAR | 10 | UQ, NN | Matricula Intitucional |
-| nombre | VARCHAR | 30 | NN | Nombre de Alumno |
-| apellido_paterno | VARCHAR | 50 | NN | Apellido Paterno |
-| apellido_materno | VARCHAR | 50 | NULL | Apellido Materno |
-| correo | VARCHAR | 100 |  UQ, NN | Correo Institucional |
-| fecha_nacimiento | DATE | - | NN | Fecha Nacimiento |
-| id_carrera | INT | - | FK, NN | Carrera a la pertenece |
+| Matricula | VARCHAR | 10 | UQ,NN | Matricula intitucional |
+| nombre | VARCHAR | 30 | NN | Nombre del alumno |
+| apellido_paterno | VARCHAR | 50 | NN | Apellido paterno del alumno |
+| apellido_materno  | VARCHAR | 50 | NULL | Apelllido materno del alumno |
+| correo | VARCHAR | 100 | UQ,NN | Correo institucional |
+| fecha_nacimiento | DATO | - | NN | Fecha de nacimiento del alumno |
+| id_carrera | INT | - | FK,NN | Carrera a la que pertenece |
 
 ---
 
@@ -102,7 +102,7 @@ Almacena Informacion de los estudiantes.
 
 | CODIGO | REGLA |
 | :--- | :--- |
-| IR-01 | No se peude registrar un alimno con una carrera inexistente |
+| IR-01 | No se peude registrar un alumno con una carrera inexistente |
 | IR-02 | No se puede crear un grupo para una materia inexistente |
 | IR-03 | No se puede crear un grupo para un profesor inexistente |
 | IR-04 | No se puede inscribir un alumno en un grupo incexistente |

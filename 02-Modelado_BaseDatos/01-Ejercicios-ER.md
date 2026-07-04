@@ -27,7 +27,7 @@ En un hospital se registra informacion de sus pasientes
 
 ## 2. Ejercicio 2
 
-una universidad administra profesores y usrsos.
+una universidad administra profesores y cursos.
 
 > De cada profesor se almacena:
 
@@ -122,4 +122,104 @@ Una empresa encargadad de realizar venta de productos:
 9. El detalle almacena cantidad y precio de venta.
  
 ## Resultado Modelo E-R
-![EMPRESA](/home/yael/Documentos/trabajo1.jpg)
+![EMPRESA](/img/E-R/diagrama4.jpg)
+
+## Ejercicio 5.
+
+Una empresa se lleva el registro de como va administrada.
+
+> De cada empleado se registra:
+- SSN.
+- Nombre.
+- Sex.
+- Salary.
+- Address.
+- Birthday.
+- Firstname.
+- Lastname.
+
+> La empresa tiene departamentos los cuales almacena los siguiente datos:
+
+- Name.
+- Number.
+- Locations.
+
+> La empresa tambien almacena datos de los DEPEDENT:
+
+- Name.
+- Sex.
+- Bithday.
+- Relation ship.
+
+> La empresa tambien realiza proyectos los cuales se registran los siguientes datos:
+
+- Number.
+- Name.
+- Location
+
+> Reglas del negocio.
+
+## Resultado Modelo E-R
+![EMPRESA](/img/E-R/Diagrama5.jpg)
+
+## Ejercicio 6.
+
+Una escuela se administra se debea administrar la siguiente informacion.
+
+> De cada Alumno se almacena la siguiente informacion:
+- Matricula.
+- Fechanaci.
+- Tel.
+- Correro.
+- Nombre.
+- Apellido1
+- Apellido2
+
+> La escuela para crear las credenciales buscan obtener y guardar los siguientes datos:
+
+- Vigencia.
+- Numcredencial.
+- Fechaoincripcion.
+
+> La escuela tambien registra las materias:
+
+- Creditos.
+- Clavemateria.
+- Nombre_materia.
+- Total_montones.
+
+**Dentro en la relacion se usa una de cursa el cual lleva los siguientes dato**
+
+- Fecha_incripcion.
+- Calificaicon_final.
+
+> La escuela tambien lleva un registro de los profesores que es el siguiente.
+
+- Rol.
+- Nombre.
+- Apellido1.
+- Apellido2.
+- Numero_profe.
+- Fechanaci.
+
+> La escuela tambien hace y tiene proyectos por lo cual se tiene que guardar:
+
+- Numproyecto.
+- Presupuesto.
+- Nombreproyecto.
+
+> La escuela tambien tiene DEPENDIENTE por lo cual para ellos se solicita guardar esta informcaion.
+
+- Fechanaci.
+- Nombre.
+- Parentesco
+
+> La escuela tambien tiene departamentos:
+
+- Edificio.
+- Nombre.
+- Numdepto.
+
+
+## Resultado Modelo E-R
+![EMPRESA](/img/E-R/Diagrama6.jpg)
