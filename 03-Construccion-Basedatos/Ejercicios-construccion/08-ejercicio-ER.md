@@ -1,3 +1,9 @@
+# COMERCIALIZADORA.
+---
+
+## CODIGO.
+
+```
 -- Crear la base de datos
 CREATE DATABASE comercializadora;
 GO 
@@ -117,3 +123,8 @@ CONSTRAINT fk_detalle_pedido_producto
 FOREIGN KEY (producto_id, fabricante_id)
 REFERENCES producto (producto_id, fabricante_id)
 );
+```
+
+---
+
+![Comercializadora](/img/E-R/trabajo1.jpg)
