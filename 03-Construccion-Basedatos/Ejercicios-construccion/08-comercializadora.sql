@@ -8,11 +8,11 @@ GO
 
 -- Tabla producto
 CREATE TABLE producto (
-	producto_id CHAR(5) NOT NULL,
-	fabricante_id CHAR(3) NOT NULL,
-	descripcion VARCHAR (40) NOT NULL,
+	producto_id CHAR(5) NOT NULL, -- char tamaño del texto
+	fabricante_id CHAR(3) NOT NULL, -- hace que sea obligatorio 
+	descripcion VARCHAR (40) NOT NULL, --
 	existencia INT NOT NULL,
-	CONSTRAINT pk_producto
+	CONSTRAINT pk_producto --restriccion
 	PRIMARY KEY (producto_id, fabricante_id),
 	CONSTRAINT uq_producto_descripcion
 	UNIQUE (descripcion),
@@ -85,8 +85,8 @@ CREATE TABLE pedido (
 GO
 
 -- AGREGAR LA FOREIGN KEY A LA TABLA CLIENTE QUE VIENE DE REPRESENTANTE
-ALTER TABLE cliente
-ADD CONSTRAINT fk_cliente_representante
+ALTER TABLE cliente --selecciona una tabla ya creada
+ADD CONSTRAINT fk_cliente_representante --Agrega una restriccion auna tabla qiue ya existe
 FOREIGN KEY (representante_id)
 REFERENCES representante(representante_id);
 GO
@@ -117,3 +117,10 @@ CONSTRAINT fk_detalle_pedido_producto
 FOREIGN KEY (producto_id, fabricante_id)
 REFERENCES producto (producto_id, fabricante_id)
 );
+
+-- drop table sldsl
+-- elimina la tabla
+-- delete elimina los datos per no la tabla
+-- DECIMAL(10,10)
+-- EL PRIMERA COLUMNA es la cantidad que se puede guardar 1000.
+-- el segundo son las decimales 1000.20

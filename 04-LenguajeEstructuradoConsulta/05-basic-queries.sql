@@ -97,4 +97,29 @@ FROM categorias AS c;
 / división
 % Modulo o residu de la division
 
-=================================================================/*
+=================================================================*/
+
+-- Seleccionar los empleados y calcular su salario anual.
+
+SELECT 
+e.nombre,
+e.apellido_paterno,
+e.salario AS salario_anual,
+(salario *12) AS salario_anual
+FROM empleados AS e;
+
+-- Seleccionar el detall de las vetnase, mostrando
+-- numero de vetna, cantidad, precio, descuento
+-- calcular el importe bruto (cantidad por el precio)
+-- calcular el importe con descuento (importe_bruto * descuento/100)
+-- Calcular el importe neto, (importe bruto por 1 menos el descuento entre 100)
+
+SELECT
+	dv.id_venta AS #veta,
+	dv.cantidad AS cantidad_vendida,
+	dv.precio AS [precio de venta],
+	dv.descuento AS 'descuento de venta'
+	(dv.cantidad * dv.precio) AS importe_bruto,
+	(dv.cantidad * dv.precio /100.0) AS importe_descuento
+	dv.cantidad * dv.precio * 1 - descuento/100 AS importe_neto
+FROM detalle_ventas AS dv;
