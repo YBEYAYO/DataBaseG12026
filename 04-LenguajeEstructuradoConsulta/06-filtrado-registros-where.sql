@@ -440,3 +440,101 @@ WHERE p.id_categoria NOT IN (1,7,12)
 ORDER BY p.id_categoria;
 
 -- TODO: OPERADOR LIKE
+/*===========================OPERADOR LIKE=======================================
+
+Permite buscar patrones dengtro de valores de texto
+sintaxis
+WHERE columan LIKE 'patron';
+Los patrones pueden contener comodines;
+	Comodin				Significado
+	   %		Cero, uo o varios valores
+	   -		Exactamente un caracter
+	 [abc]		Un carácter incluido en la lista
+	 [a-f]		Un carácter incluido en el rango
+	 [^abc]		Un carácter no includio en la lista
+================================================================================*/
+
+-- COMODIN %
+-- El simpbolo % representa cualquier cantidad de caracteres, incluyendo 0 caracteres
+-- Comienza de esta forma
+-- WHERE nombre LIKE 'cliente%'
+-- Valores que comienzan con cliente
+
+-- TERMINA
+-- WHERE correo LIKE '%mail.com'
+-- Valores que terminan con mail.com
+
+-- CONTIENE
+-- WHERE Nombre LIKE '%a%'
+-- Valores que contienen el caracter a en cualquier posición
+-- Buscar codigos de productos que comiencen con P001
+
+SELECT
+	p.codigo,
+	p.nombre,
+	p.precio
+FROM productos AS p
+WHERE p.codigo LIKE 'P001%';
+
+SELECT *
+FROM Customers
+WHERE CompanyName LKE I'Bo%';
+
+-- Buscar los correos de los clientes que terminan exactamente con 10@mail.com
+
+SELECT 
+	c.id_cliente,
+	c.nombre,
+	c.correo
+FROM clientes AS c
+WHERE c.correo LIKE '%10@mail.com';
+
+-- Mostrar los nombres de los productos que contienen el caracter 1
+
+SELECT 
+	p.codigo,
+	p.nombre,
+	p.precio
+FROM productos AS p
+where p.nombre LIKE '%1%';
+
+-- Comodin de una caracteristica
+-- El guion bajo_representa exactamente un caracter
+
+-- Mostrar los codigos con P001 y exactamente un caracter adicional
+SELECT 
+	p.codigo,
+	p.nombre,
+	p.precio
+FROM productos AS p
+where p.codigo LIKE 'P000_';
+
+-- Patrones con corchetes
+
+SELECT 
+	p.codigo,
+	p.nombre,
+	p.precio
+FROM productos AS p
+where p.codigo LIKE 'P000[1-5]';
+
+SELECT 
+	p.codigo,
+	p.nombre,
+	p.precio
+FROM productos AS p
+where p.codigo LIKE 'P000[^1-5]';
+
+-- BUSAR un gion bajo literal
+-- En LIKE _ es un comodion
+-- Las ciudades de esta base de datos, contien ugiones bajos, por ejemplo;
+-- laciodad_1_1
+-- Para buscar un guin bajo literal mediante corchetes se peude utilizar:
+
+SELECT *
+FROM ciudades;
+
+SELECT *
+FROM ciudades AS c
+WHERE nombre LIKE '%[_]%';
+
