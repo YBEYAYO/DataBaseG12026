@@ -501,6 +501,13 @@ where p.nombre LIKE '%1%';
 -- Comodin de una caracteristica
 -- El guion bajo_representa exactamente un caracter
 
+SELECT 
+p.codigo,
+p.nombre,
+p.precio
+FROM productos AS p
+WHERE p.codigo LIKE 'P0_00';
+
 -- Mostrar los codigos con P001 y exactamente un caracter adicional
 SELECT 
 	p.codigo,
@@ -508,6 +515,20 @@ SELECT
 	p.precio
 FROM productos AS p
 where p.codigo LIKE 'P000_';
+
+SELECT 
+p.codigo,
+p.nombre,
+p.precio
+FROM productos AS p
+WHERE p.codigo LIKE 'P000&';
+
+SELECT 
+p.codigo,
+p.nombre,
+p.precio
+FROM productos AS p
+WHERE p.codigo LIKE 'P0_00';
 
 -- Patrones con corchetes
 
